@@ -11,6 +11,7 @@ body {
 body {
 	background: #21456c;
 	position: relative;
+	cursor: default;
 }
 
 .logo {
@@ -34,6 +35,7 @@ body {
 .logo > span {
 	font-size: 500px;
 	display: inline-block;
+	position: relative;
 }
 
 .mask-top {
@@ -46,7 +48,6 @@ body {
 
 .eyes {
 	margin-left: -40px;
-	position: relative;
 	top: -10px;
 }
 
@@ -60,9 +61,7 @@ body {
 
 span.mask-tie {
 	-webkit-transform: rotate(-90deg);
-	position: absolute;
-	top: 440px; left: 175px;
+	left: -440px;
+	top: 220px;
 	font-size: 270px;
-
-	/*display: none;*/
 }
