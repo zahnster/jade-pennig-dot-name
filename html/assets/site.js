@@ -40,12 +40,22 @@ function ninjaFace() {
 	function calculateMaskTop() {
 		var maskTop = document.querySelector('.mask-top');
 		var maskBrow = document.querySelector('.brow');
+		var topMoveY, browMoveY;
 
-		maskTop.style.top = -(maskAllowX * mouseXPct - (maskAllowX / 2)) + 'px';
-		maskTop.style.left = (outerAllowY * mouseYPct - (outerAllowY / 2)) + 'px';
+		if (mouseYPct > 0.5) {
+			topMoveY = outerAllowY;
+			browMoveY = innerAllowY;
+		}
+		else {
+			topMoveY = innerAllowY;
+			browMoveY = outerAllowY;
+		}
 
 		maskBrow.style.top = -(maskAllowX * mouseXPct - (maskAllowX / 2)) + 'px';
-		maskBrow.style.left = (innerAllowY * mouseYPct - (innerAllowY / 2)) + 'px';
+		maskBrow.style.left = (browMoveY * mouseYPct - (browMoveY / 2)) + 'px';
+
+		maskTop.style.top = -(maskAllowX * mouseXPct - (maskAllowX / 2)) + 'px';
+		maskTop.style.left = (topMoveY * mouseYPct - (topMoveY / 2)) + 'px';
 	}
 
 	function calculateEyes() {
@@ -58,12 +68,22 @@ function ninjaFace() {
 	function calculateMaskBottom() {
 		var maskMouth = document.querySelector('.mask-mouth');
 		var maskBottom = document.querySelector('.mask-bottom');
+		var mouthMoveY, bottomMoveY;
+
+		if (mouseYPct > 0.5) {
+			mouthMoveY = outerAllowY;
+			maskMoveY = innerAllowY;
+		}
+		else {
+			mouthMoveY = innerAllowY;
+			maskMoveY = outerAllowY;
+		}
 
 		maskMouth.style.top = -(maskAllowX * mouseXPct - (maskAllowX / 2)) + 'px';
-		maskMouth.style.left = (innerAllowY * mouseYPct - (innerAllowY / 2)) + 'px';
+		maskMouth.style.left = (mouthMoveY * mouseYPct - (mouthMoveY / 2)) + 'px';
 
 		maskBottom.style.top = -(maskAllowX * mouseXPct - (maskAllowX / 2)) + 'px';
-		maskBottom.style.left = (outerAllowY * mouseYPct - (outerAllowY / 2)) + 'px';
+		maskBottom.style.left = (maskMoveY * mouseYPct - (maskMoveY / 2)) + 'px';
 	}
 
 	function calculateTie() {
