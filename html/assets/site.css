@@ -12,6 +12,7 @@ body {
 	font-family: 'Baloo Bhai', sans-serif;
 	background: radial-gradient(circle, #21456c, #1e2f40);
 	position: relative;
+	overflow: hidden;
 	cursor: default;
 }
 
@@ -22,12 +23,15 @@ body {
 	white-space: nowrap;
 	color: white;
 	text-shadow: 0 0 20px rgba(0,0,0,0.5);
+	text-indent: .014rem;
 
-	height: 638px;
-	width: 630px;
+	height: 1rem;
+	width: 1rem;
+	vertical-align: top;
+
 	position: absolute;
-	left: 50%; top: 50%;
-	margin: -319px 0 0 320px;
+	top: 50%; left: 50%;
+	margin: -0.5rem 0 0 0.5rem;
 
 	transform: rotate(90deg);
 	transform-origin: 0 0;
@@ -40,7 +44,7 @@ body {
 }
 
 .logo > span {
-	font-size: 500px;
+	font-size: 0.7rem;
 	display: inline-block;
 	position: relative;
 }
@@ -50,29 +54,30 @@ body {
 }
 
 .brow {
-	margin-left: -70px;
+	margin-left: -0.1rem;
 }
 
 .eyes {
-	margin-left: -40px;
-	top: -10px;
+	margin-left: -0.05rem;
+	top: -0.02rem;
 }
 
 .mask-mouth {
-	margin-left: -40px;
+	margin-left: -0.05rem;
 }
 
 .mask-bottom {
-	margin-left: -70px;
+	margin-left: -0.1rem;
 }
 
-span.mask-tie {
-	font-size: 270px;
+
+span.mask-knot {
+	font-size: 0.45rem;
 
 	transform: rotate(90deg);
 	-webkit-transform: rotate(-90deg);
 	-moz-transform: rotate(90deg);
 
-	left: -440px;
-	top: 220px;
+	top: .35rem;
+	left: -.7rem;
 }
