@@ -1,0 +1,68 @@
+* {
+	padding: 0; margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background: #21456c;
+	position: relative;
+}
+
+.logo {
+	font-family: 'Work Sans', 'Helvetica Neue';
+	font-weight: 500;
+	font-size: 0;
+	white-space: nowrap;
+	color: white;
+	text-shadow: 0 0 20px rgba(0,0,0,0.5);
+
+	height: 638px;
+	width: 630px;
+	position: absolute;
+	left: 50%; top: 50%;
+	margin: -319px 0 0 320px;
+
+	-webkit-transform: rotate(90deg);
+	-webkit-transform-origin: 0 0;
+}
+
+.logo > span {
+	font-size: 500px;
+	display: inline-block;
+}
+
+.mask-top {
+
+}
+
+.brow {
+	margin-left: -70px;
+}
+
+.eyes {
+	margin-left: -40px;
+	position: relative;
+	top: -10px;
+}
+
+.mask-mouth {
+	margin-left: -40px;
+}
+
+.mask-bottom {
+	margin-left: -70px;
+}
+
+span.mask-tie {
+	-webkit-transform: rotate(-90deg);
+	position: absolute;
+	top: 440px; left: 175px;
+	font-size: 270px;
+
+	/*display: none;*/
+}
