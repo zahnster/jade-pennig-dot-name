@@ -5,8 +5,16 @@ document.addEventListener('DOMContentLoaded', function() {
 function ninjaFace() {
 	var screenWidth = document.body.clientWidth;
 	var screenHeight = document.body.clientHeight;
+	
 	var mouseXPct = 0.5;
 	var mouseYPct = 0.5;
+
+	var eyesAllowX = 55;
+	var eyesAllowY = 45;
+	
+	var maskAllowX = 25;
+	var outerAllowY = 45;
+	var innerAllowY = 10;
 
 	document.body.addEventListener('mousemove', function(event) {
 		mouseXPct = event.clientX / screenWidth;
@@ -33,51 +41,35 @@ function ninjaFace() {
 		var maskTop = document.querySelector('.mask-top');
 		var maskBrow = document.querySelector('.brow');
 
-		var topAllowX = 10;
-		var maskTopAllowY = 20;
-		var maskBrowAllowY = 10;
+		maskTop.style.top = -(maskAllowX * mouseXPct - (maskAllowX / 2)) + 'px';
+		maskTop.style.left = (outerAllowY * mouseYPct - (outerAllowY / 2)) + 'px';
 
-		maskTop.style.top = -(topAllowX * mouseXPct - (topAllowX / 2)) + 'px';
-		maskTop.style.left = (maskTopAllowY * mouseYPct - (maskTopAllowY / 2)) + 'px';
-
-		maskBrow.style.top = -(topAllowX * mouseXPct - (topAllowX / 2)) + 'px';
-		maskBrow.style.left = (maskBrowAllowY * mouseYPct - (maskBrowAllowY / 2)) + 'px';
+		maskBrow.style.top = -(maskAllowX * mouseXPct - (maskAllowX / 2)) + 'px';
+		maskBrow.style.left = (innerAllowY * mouseYPct - (innerAllowY / 2)) + 'px';
 	}
 
 	function calculateEyes() {
 		var eyes = document.querySelector('.eyes');
-		var xAllow = 40;
-		var yAllow = 30;
 
-		eyes.style.top = -(xAllow * mouseXPct - (xAllow / 2) + 10) + 'px';
-		eyes.style.left = (yAllow * mouseYPct - (yAllow / 2)) + 'px';
+		eyes.style.top = -(eyesAllowX * mouseXPct - (eyesAllowX / 2) + 10) + 'px';
+		eyes.style.left = (eyesAllowY * mouseYPct - (eyesAllowY / 2)) + 'px';
 	}
 
 	function calculateMaskBottom() {
 		var maskMouth = document.querySelector('.mask-mouth');
 		var maskBottom = document.querySelector('.mask-bottom');
 
-		var bottomAllowX = 10;
-		var maskMouthAllowY = 10;
-		var maskBottomAllowY = 20;
+		maskMouth.style.top = -(maskAllowX * mouseXPct - (maskAllowX / 2)) + 'px';
+		maskMouth.style.left = (innerAllowY * mouseYPct - (innerAllowY / 2)) + 'px';
 
-		maskMouth.style.top = -(bottomAllowX * mouseXPct - (bottomAllowX / 2)) + 'px';
-		maskMouth.style.left = (maskMouthAllowY * mouseYPct - (maskMouthAllowY / 2)) + 'px';
-
-		maskBottom.style.top = -(bottomAllowX * mouseXPct - (bottomAllowX / 2)) + 'px';
-		maskBottom.style.left = (maskBottomAllowY * mouseYPct - (maskBottomAllowY / 2)) + 'px';
+		maskBottom.style.top = -(maskAllowX * mouseXPct - (maskAllowX / 2)) + 'px';
+		maskBottom.style.left = (outerAllowY * mouseYPct - (outerAllowY / 2)) + 'px';
 	}
 
 	function calculateTie() {
 		var maskTie = document.querySelector('.mask-tie');
-		var xAllow = 10;
-		var yAllow = 10;
 
-		maskTie.style.top = -((xAllow * mouseXPct - (xAllow / 2)) - 220) + 'px';
-		maskTie.style.left = ((yAllow * mouseYPct - (yAllow / 2)) - 440) + 'px';
-
-
-	// 	maskTie.style.top = (xMove + 220) + 'px';
-	// 	maskTie.style.left = (yMove - 440) + 'px';
+		maskTie.style.top = -((maskAllowX * mouseXPct - (maskAllowX / 2)) - 220) + 'px';
+		maskTie.style.left = ((innerAllowY * mouseYPct - (innerAllowY / 2)) - 440) + 'px';
 	}
 }
