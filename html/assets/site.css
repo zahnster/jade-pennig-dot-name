@@ -9,13 +9,14 @@ body {
 }
 
 body {
-	background: #21456c;
+	font-family: 'Baloo Bhai', sans-serif;
+	background: radial-gradient(circle, #21456c, #1e2f40);
 	position: relative;
 	cursor: default;
 }
 
 .logo {
-	font-family: 'Work Sans', 'Helvetica Neue';
+	font-family: 'Work Sans', 'Helvetica Neue', sans-serif;
 	font-weight: 500;
 	font-size: 0;
 	white-space: nowrap;
@@ -28,8 +29,14 @@ body {
 	left: 50%; top: 50%;
 	margin: -319px 0 0 320px;
 
+	transform: rotate(90deg);
+	transform-origin: 0 0;
+
 	-webkit-transform: rotate(90deg);
 	-webkit-transform-origin: 0 0;
+
+	-moz-transform: rotate(90deg);
+	-moz-transform-origin: 0 0;
 }
 
 .logo > span {
@@ -60,8 +67,12 @@ body {
 }
 
 span.mask-tie {
+	font-size: 270px;
+
+	transform: rotate(90deg);
 	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(90deg);
+
 	left: -440px;
 	top: 220px;
-	font-size: 270px;
 }

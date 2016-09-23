@@ -9,8 +9,8 @@ function ninjaFace() {
 	var mouseXPct = 0.5;
 	var mouseYPct = 0.5;
 
-	var eyesAllowX = 55;
-	var eyesAllowY = 45;
+	var eyesAllowX = 60;
+	var eyesAllowY = 60;
 	
 	var maskAllowX = 25;
 	var outerAllowY = 45;
